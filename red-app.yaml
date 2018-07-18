@@ -1,0 +1,48 @@
+---
+classes:
+  httpd:
+  httpd::certs:
+  nrpe::dropwizard: 
+  java:
+  red:
+  rds:
+  users::redapp:
+    groups:
+    - app
+    - sys
+parameters:
+  apache:
+    port: '8080'
+    servername: red.tracelink.com
+  release:
+    checkPackages: java-1.8.0-openjdk httpd
+    maphost: 'false'
+    services: red
+  rds:
+    red:
+      address: red-app-db.us-east-1.rds.amazonaws.com
+      backup: '2'
+      dbnames:
+        - red1
+        - red2
+      engine: postgres
+      zone: multi
+    ops:
+      address: ops-db.us-east-1.rds.amazonaws.com
+      backup: '2'
+      dbnames:
+        - django
+        - puppetdash
+        - opscore
+      engine: mysql
+      zone: us-east-1c
+  ec2:
+    instance:
+      type: m3.large
+      ebs: 100
+    keys:
+      red:
+        access: awsaccesskey3
+        secret: awssecretkey3
+
+

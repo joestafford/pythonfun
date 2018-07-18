@@ -1,0 +1,11 @@
+---
+classes:
+  users::sysadmin1:
+    groups:
+    - admin
+    - sys
+parameters:
+  ec2:
+    instance:
+      type: m3.xlarge
+

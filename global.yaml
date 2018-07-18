@@ -1,0 +1,35 @@
+---
+classes:
+  openssh:
+  postfix::client:
+  rsyslog::client:
+  nrpe:
+  logstash:
+  users::rorzabal:
+    groups:
+    - qe
+    - webadmin
+  users::csmith:
+    groups:
+    - dev
+parameters:
+  postfix:
+    client_ca: msa-cluster.crt
+    client_cert: cluster-client.pem
+    cluster_host: msa-cluster.tracelink.com
+    install_dir: /etc/postfix
+  logstash:
+    es_server: search-tracelink-elk-1234.us-east-1.es-amazonaws.com
+    conf_dir: /etc/logstash/conf.d
+  ec2:
+    REGION: us-east-1
+    USERID: '12345678'
+    ZONEA: us-east-1c
+    ZONEB: us-east-1e
+    keys:
+      es:
+        access: awsaccesskey1
+        secret: awssecretkey1
+      nagios:
+        access: awsaccesskey2
+        secret: awssecretkey2

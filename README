@@ -1,0 +1,27 @@
+Congratulations on making it to this stage in our candidate evaluation, and 
+thank you for the time and effort you have committed to us.  What we are looking 
+for in this stage is a sample of your coding style.  This is not just about 
+getting the correct output, in fact that may be the least important part.  This 
+is really about getting insight into your thought process and problems solving.  
+And also about the look and feel of your coding style. So on to the problem:
+
+Puppet has a feature called ENC, that calls an external script to generate a
+node definition.  Your project is to write a python script that puppet will call.
+The script should read 3 layers of configuration files, and merge these into a
+single yaml output for puppet.
+
+Three files are provided as sample of each configuration layer:
+
+global.yaml  - configuration applicable to all nodes
+app-red.yaml - application specific configuration for a subset (red) of nodes
+red10.yaml   - configuration specific to the node red10.tracelink.com
+
+If you have any questions feel free to email me, and once you are happy with
+your script you can email me a link to the script, or attache it to an email. 
+Do note however that our email system will block executable file types so
+please replace the .py with .txt  in the file name.
+
+Thanks
+Jason Normand
+jnormand@tracelink.com
+
